@@ -21,8 +21,9 @@ repositories {
 coveralls {
     jacocoReportPath = "${buildDir}/reports/coverage/coverageReport.xml"
     subprojects.each { p ->
-        sourceDirs.add(p.getPath())
+        sourceDirs.addAll(p.sourceSets.main.allJava.srcDirs)
     }
+    logger.log(LogLevel.WARN, "sets {}", sourceDirs)
 }
 
 task coverageReport(type: JacocoReport) {
