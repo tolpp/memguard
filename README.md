@@ -48,10 +48,10 @@ new Guard.Builder<String>()
 By default, memguard uses Java's default serializer as serializer and RandomXorEncoder as variable encoder.
 
 ### TODO's
-- [] Continuous integration
-- [] Wiki page
-- [] Add project to maven central.
-- [] Add RSA Encryption encoder
+- [ ] Continuous integration
+- [ ] Wiki page
+- [ ] Add project to maven central.
+- [ ] Add RSA Encryption encoder
 
 ### Licanse
 Apache 2.0
