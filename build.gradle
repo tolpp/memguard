@@ -1,7 +1,16 @@
 plugins {
+    id 'jacoco'
     id "org.sonarqube" version "2.2"
 }
+
+apply plugin: 'java'
 
 group 'com.tolpp.memguard'
 version '0.1-SNAPSHOT'
 
+jacocoTestReport {
+    reports {
+        xml.enabled = true // coveralls plugin depends on xml format report
+        html.enabled = true
+    }
+}
