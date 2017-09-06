@@ -5,13 +5,13 @@ Memguard protect your sensitive values in memory against memory editing software
 ### Installation
 Memguard is not in any maven repository currently. Clone repository to your locale and then:
 
-Include project settings.gradle
+Include project in settings.gradle file
 ```groovy
 include 'memguard-root'
 project(':memguard-root').projectDir = new File('../../memguard')
 ``` 
 
-Add dependency via build.gradle
+Add dependency using build.gradle file
 ```groovy
 dependencies {
   compile project(':memguard')
