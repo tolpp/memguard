@@ -57,7 +57,7 @@ By default, memguard uses Java's default serializer as serializer and RandomXorE
 - [ ] Add project to maven central.
 - [ ] Add RSA Encryption encoder
 
-### Licanse
+### License
 Apache 2.0
  
 
