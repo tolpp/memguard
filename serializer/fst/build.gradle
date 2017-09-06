@@ -1,0 +1,16 @@
+group 'com.tolpp.memguard'
+version '0.1-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile project(":memguard")
+    compile "de.ruedigermoeller:fst:2.52"
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}

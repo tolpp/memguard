@@ -1,0 +1,44 @@
+plugins {
+    id 'jacoco'
+    id "org.sonarqube" version "2.2"
+}
+
+apply plugin: 'java'
+allprojects {
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+}
+
+group 'com.tolpp.memguard'
+version '0.1-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+task coverageReport(type: JacocoReport) {
+    dependsOn = subprojects.test
+    sourceSets sourceSets.main
+
+    def execFiles = []
+    subprojects.each { p ->
+        def coverageFileLocation = "$p.buildDir/jacoco/test.exec"
+        additionalSourceDirs files((Set<File>) p.sourceSets.main.allJava.srcDirs)
+        additionalClassDirs((FileCollection) p.sourceSets.main.output)
+        if (new File(coverageFileLocation).exists()) {
+            execFiles << coverageFileLocation
+        }
+    }
+
+    logger.info('Aggregate coverage files :', execFiles)
+    executionData = files(execFiles)
+
+    reports {
+        xml.enabled = true
+        xml.destination = "${buildDir}/reports/jacoco/report.xml"
+        csv.enabled = false
+        html.enabled = false
+    }
+
+}
