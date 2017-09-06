@@ -1,0 +1,5 @@
+rootProject.name = 'memguard-root'
+include 'memguard'
+include 'serializer:fst'
+findProject(':serializer:fst')?.name = 'memguard-serializer-fst'
+
