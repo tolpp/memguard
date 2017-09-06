@@ -51,12 +51,12 @@ public final class Guard<T extends Serializable> {
      * @param value Serializable object that will be stored.
      */
     public void set(T value) {
-        byte[] encoded = serializer.serialize(value);
+        byte[] serialized = serializer.serialize(value);
         for (Encoder encoder : encoders) {
-            encoded = encoder.encode(encoded);
+            serialized = encoder.encode(serialized);
         }
 
-        this.encoded = encoded;
+        this.encoded = serialized;
     }
 
     /**
