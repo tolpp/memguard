@@ -1,6 +1,6 @@
 # memguard
 Memguard is a lightweight and an extensible memory security and protection framework for Java and Android applications.
-Memguard protect your sensitive values in memory against memory editing softwares. 
+Memguard protects your sensitive values in memory against memory editing softwares. 
 
 ### Installation
 Memguard is not in any maven repository currently. Clone repository to your locale and then:
