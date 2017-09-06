@@ -1,4 +1,4 @@
-# memguard
+# memguard [![Build Status](https://travis-ci.org/tolpp/memguard.svg?branch=master)](https://travis-ci.org/tolpp/memguard)
 Memguard is a lightweight and an extensible memory security and protection framework for Java and Android applications.
 Memguard protects your sensitive values in memory against memory editing softwares. 
 
@@ -52,7 +52,7 @@ new Guard.Builder<String>()
 By default, memguard uses Java's default serializer as serializer and RandomXorEncoder as variable encoder.
 
 ### TODO's
-- [ ] Continuous integration
+- [x] Continuous integration
 - [ ] Wiki page
 - [ ] Add project to maven central.
 - [ ] Add RSA Encryption encoder
