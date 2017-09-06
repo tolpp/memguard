@@ -10,4 +10,4 @@ script:
   - ./gradlew check sonarqube
 
 after_success:
-  - ./gradlew test jacocoTestReport coveralls
+  - ./gradlew test jacocoRootTestReport coveralls
