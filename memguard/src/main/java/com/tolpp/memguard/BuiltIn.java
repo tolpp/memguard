@@ -7,6 +7,11 @@ import com.tolpp.memguard.serializer.JavaSerializer;
  * Built in default when no configuration or implementation given.
  */
 class BuiltIn {
+
+    private BuiltIn(){
+        throw new IllegalStateException("This class should not be initialized!");
+    }
+
     /**
      * Default java serializer.
      */
