@@ -7,14 +7,18 @@ Memguard is not in any maven repository currently. Clone repository to your loca
 
 Include project in settings.gradle file
 ```groovy
-include 'memguard-root'
-project(':memguard-root').projectDir = new File('../../memguard')
+include 'memguard'
+// include 'memguard-serializer-fst' // uncomment if you will use fst serializer
+
+project(':memguard').projectDir = new File('../memguard/memguard')
+// project(':memguard-serializer-fst').projectDir = new File('../memguard/serializer/fst')
 ``` 
 
 Add dependency using build.gradle file
 ```groovy
 dependencies {
   compile project(':memguard')
+  // compile project(':memguard-serializer-fst') // uncomment if you will use fst serializer
 }
 
 ```
