@@ -1,6 +1,5 @@
 plugins {
     id 'jacoco'
-    id 'com.github.kt3k.coveralls' version '2.6.3'
     id "org.sonarqube" version "2.2"
 }
 
@@ -16,14 +15,6 @@ version '0.1-SNAPSHOT'
 
 repositories {
     mavenCentral()
-}
-
-coveralls {
-    jacocoReportPath = "${buildDir}/reports/coverage/coverageReport.xml"
-    subprojects.each { p ->
-        sourceDirs.addAll(p.sourceSets.main.allJava.srcDirs)
-    }
-    logger.log(LogLevel.WARN, "sets {}", sourceDirs)
 }
 
 task coverageReport(type: JacocoReport) {
@@ -45,10 +36,9 @@ task coverageReport(type: JacocoReport) {
 
     reports {
         xml.enabled = true
-        xml.destination = "${buildDir}/reports/coverage/coverageReport.xml"
+        xml.destination = "${buildDir}/reports/jacoco/report.xml"
         csv.enabled = false
         html.enabled = false
     }
 
 }
-
