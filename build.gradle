@@ -9,8 +9,8 @@ allprojects {
     apply plugin: 'jacoco'
 }
 
-group 'com.tolpp.memguard'
-version '0.1-SNAPSHOT'
+group GROUP
+version VERSION_NAME
 
 
 repositories {
