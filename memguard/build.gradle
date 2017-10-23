@@ -1,5 +1,5 @@
-group 'com.tolpp.memguard'
-version '0.1-SNAPSHOT'
+group GROUP
+version VERSION_NAME
 
 apply plugin: 'java'
 
@@ -12,3 +12,5 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
+
+apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
