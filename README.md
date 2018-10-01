@@ -1,5 +1,5 @@
 # memguard [![Build Status](https://travis-ci.org/tolpp/memguard.svg?branch=master)](https://travis-ci.org/tolpp/memguard)
-Memguard is a lightweight and an extensible memory security and protection framework for Java and Android applications.
+Memguard is a lightweight and extensible memory security and protection library for Java and Android applications.
 Memguard protects your sensitive data in memory against memory editing software (Like trainers, GameGuardian in Android etc..). 
 
 ### Installation
